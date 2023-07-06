@@ -1,7 +1,7 @@
 
-$name = "testwithoutpe1gp"
-$rgname = "TigerTeam-TSS_AutomatedGovernance-RG"
-$subscription = "PG-Sandbox-01"
+$name = $0
+$rgname = $1
+$subscription = $2
 
 $vnetrule = Get-AzMariaDbVirtualNetworkRule -ResourceGroupName $rgname -ServerName $name
 $vnetrulename = $vnetrule.name
