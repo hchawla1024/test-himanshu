@@ -1,8 +1,8 @@
-
-$name = $0
-$rgname = $1
-$subscription = $2
-
+param(
+        [string] $serverName,
+        [string] $rgName,
+        [string] $subscription
+      )
 $vnetrule = Get-AzMariaDbVirtualNetworkRule -ResourceGroupName $rgname -ServerName $name
 $vnetrulename = $vnetrule.name
 
