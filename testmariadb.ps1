@@ -1,11 +1,9 @@
 param($name , $rgname)
 
-Install-Module -Name Az.MariaDb
-
-$vnetrule = Get-AzMariaDbVirtualNetworkRule -ResourceGroupName $rgname -ServerName $name
+$vnetrule = Get-AzResource -ResourceGroupName $rgname -ResourceType Microsoft.DBforMariaDB/servers/virtualNetworkRules -ResourceName $name -ApiVersion 2018-06-01
 $vnetrulename = $vnetrule.name
 
-$firewallrule = Get-AzMariaDbFirewallRule -ResourceGroupName $rgname -ServerName $name
+$firewallrule = Get-AzResource -ResourceGroupName $rgname -ResourceType Microsoft.DBforMariaDB/servers/firewallRules -ResourceName $name -ApiVersion 2018-06-01
 $firewallrulename = $firewallrule.name
  
 
