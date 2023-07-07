@@ -1,7 +1,7 @@
-param(
-        [string] $name,
-        [string] $rgname,
-      )
+
+     $name : "testwithoutpe1gp"
+    $rgname : "TigerTeam-TSS_AutomatedGovernance-RG"
+
 $vnetrule = Get-AzMariaDbVirtualNetworkRule -ResourceGroupName $rgname -ServerName $name
 $vnetrulename = $vnetrule.name
 
