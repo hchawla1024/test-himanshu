@@ -1,5 +1,6 @@
 param($name , $rgname)
 
+Import-Module -Name Az.MariaDb
 
 $vnetrule = Get-AzMariaDbVirtualNetworkRule -ResourceGroupName $rgname -ServerName $name
 $vnetrulename = $vnetrule.name
