@@ -1,4 +1,4 @@
-Install-Module Az.MariaDb
+Install-Module Az.MariaDb -Force
 
 param($name , $rgname)
 
