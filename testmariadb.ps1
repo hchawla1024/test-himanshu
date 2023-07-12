@@ -1,6 +1,6 @@
 param($name , $rgname)
 
-$vnetrule = Get-AzResource -ResourceGroupName $rgname -ResourceType Microsoft.DBforMariaDB/servers/virtualNetworkRules -ResourceName $name -ApiVersion 2018-06-01
+$vnetrule = Get-AzMariaDbVirtualNetworkRule -ResourceGroupName $rgname -ServerName $name
 $vnetrulename = $vnetrule.name
 
 $firewallrule = Get-AzResource -ResourceGroupName $rgname -ResourceType Microsoft.DBforMariaDB/servers/firewallRules -ResourceName $name -ApiVersion 2018-06-01
