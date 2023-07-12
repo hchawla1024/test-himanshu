@@ -1,4 +1,4 @@
-Install-Module Az.MariaDb -Force
+param($rgname, $name)
 
 $vnetrule = Get-AzMariaDbVirtualNetworkRule -ResourceGroupName $rgname -ServerName $name
 $vnetrulename = $vnetrule.name
