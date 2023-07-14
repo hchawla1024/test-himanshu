@@ -1,6 +1,4 @@
-
-$name = "testwithoutanything"
-$rgname = "TigerTeam-TSS_AutomatedGovernance-RG"
+param($rgname, $name)
 
 $firewallrule = Get-AzResource -ResourceGroupName $rgname -ResourceName $name -ResourceType Microsoft.Kusto/clusters -ApiVersion 2022-12-29
 $firewallruleiprange = $firewallrule.properties.allowedIpRangeList
