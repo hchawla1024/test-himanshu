@@ -1,5 +1,7 @@
 param($rgname, $name)
 
+Install-Module Az.Kusto -Force
+
 $firewallrule = Get-AzResource -ResourceGroupName $rgname -ResourceName $name -ResourceType Microsoft.Kusto/clusters -ApiVersion 2022-12-29
 $firewallruleiprange = $firewallrule.properties.allowedIpRangeList
  
