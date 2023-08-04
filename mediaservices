@@ -1,8 +1,6 @@
-param($name , $rgname)
-
 az login --identity -u /subscriptions/6939ec6c-6633-41b1-bbd0-399e20260db0/resourcegroups/TigerTeam-TSS_AutomatedGovernance-RG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/css10ams11
 
 
-az ams account update --name $name --resource-group $rgname --set publicNetworkAccess=disabled
+az ams account update --name $1 --resource-group $2 --set publicNetworkAccess=disabled
 
 
