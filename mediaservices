@@ -1,5 +1,5 @@
 
-$id = "/subscriptions/6939ec6c-6633-41b1-bbd0-399e20260db0/resourceGroups/TigerTeam-TSS_AutomatedGovernance-RG/providers/Microsoft.Media/mediaservices/testmediawithpe"
+param($id)
 
 az ams account update --ids $id --set publicNetworkAccess=disabled --set keyDelivery.accessControl.defaultAction=Deny
 
