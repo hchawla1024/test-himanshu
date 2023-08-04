@@ -1,6 +1,3 @@
-
-param($id)
-
 az ams account update --ids $id --set publicNetworkAccess=disabled --set keyDelivery.accessControl.defaultAction=Deny
 
 
