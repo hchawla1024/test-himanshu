@@ -1,0 +1,7 @@
+
+
+$name = "testmediawithpe"
+$rgname = "TigerTeam-TSS_AutomatedGovernance-RG"
+az ams account update --name $name --resource-group $rgname --set publicNetworkAccess=disabled --set keyDelivery.accessControl.defaultAction=Deny
+
+
